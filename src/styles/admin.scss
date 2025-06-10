@@ -1,0 +1,425 @@
+// Markdown styling
+.mcp-markdown {
+    color: #333;
+    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Oxygen-Sans', Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+
+    // Headings
+    h1, h2, h3, h4, h5, h6 {
+        color: #2c3e50;
+        font-weight: 600;
+        line-height: 1.25;
+        margin-bottom: 0.75em;
+        margin-top: 1.5em;
+    }
+
+    h1 {
+        border-bottom: 2px solid #eee;
+        font-size: 1.5em;
+        padding-bottom: 0.25em;
+    }
+
+    h2 {
+        border-bottom: 1px solid #eee;
+        font-size: 1.3em;
+        padding-bottom: 0.25em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    h4 {
+        font-size: 1.1em;
+    }
+
+    h5, h6 {
+        font-size: 1em;
+    }
+
+    // Paragraphs and lists
+    p {
+        margin-bottom: 1em;
+    }
+
+    ul, ol {
+        margin: 0.75em 0;
+        padding-left: 1.5em;
+
+        li {
+            margin-bottom: 0.25em;
+        }
+
+        ul, ol {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    // Code
+    code {
+        background-color: #f6f8fa;
+        border-radius: 3px;
+        color: #d73a49;
+        font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+        font-size: 0.9em;
+        padding: 0.2em 0.4em;
+    }
+
+    pre {
+        background-color: #f6f8fa;
+        border: 1px solid #e1e4e8;
+        border-radius: 6px;
+        margin: 1em 0;
+        overflow-x: auto;
+        padding: 1em;
+
+        code {
+            background-color: transparent;
+            border-radius: 0;
+            color: #24292e;
+            padding: 0;
+        }
+    }
+
+    // Blockquotes
+    blockquote {
+        background-color: #f8f9fa;
+        border-left: 4px solid #dfe2e5;
+        color: #6a737d;
+        margin: 1em 0;
+        padding: 0.5em 1em;
+
+        p {
+            margin-bottom: 0.5em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // Links
+    a {
+        color: #0366d6;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    // Text formatting
+    strong {
+        font-weight: 600;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    // Tables
+    table {
+        border-collapse: collapse;
+        margin: 1em 0;
+        width: 100%;
+
+        th, td {
+            border: 1px solid #dfe2e5;
+            padding: 0.5em 0.75em;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f6f8fa;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+    }
+
+    // Images
+    img {
+        border-radius: 3px;
+        height: auto;
+        margin: 0.5em 0;
+        max-width: 100%;
+    }
+
+    // Reset margins
+    > :first-child {
+        margin-top: 0;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+// Chat App Styles
+.mcp-chat-app {
+    .mcp-chat-messages {
+        border-radius: 8px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+
+        .mcp-message {
+            animation: fadeInUp 0.3s ease-out;
+
+            &--user .mcp-message-content {
+                background-color: #e3f2fd;
+                border-left: 4px solid #1976d2;
+            }
+
+            &--assistant .mcp-message-content {
+                background-color: #fff;
+                border-left: 4px solid #4caf50;
+            }
+
+            &--system .mcp-message-content {
+                background-color: #f1f8e9;
+                border-left: 4px solid #689f38;
+            }
+        }
+    }
+
+    .components-textarea-control__input {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Oxygen-Sans', Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+        min-height: 80px;
+        resize: vertical;
+    }
+
+    .components-panel__body {
+        border: none;
+
+        .components-panel__body-title {
+            border-top: 1px solid #e0e0e0;
+
+            &:first-child {
+                border-top: none;
+            }
+        }
+    }
+
+    // Scrollbar styling
+    .mcp-chat-messages::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .mcp-chat-messages::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+    }
+
+    .mcp-chat-messages::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 4px;
+
+        &:hover {
+            background: #a1a1a1;
+        }
+    }
+}
+
+// Settings App Styles
+.mcp-settings-app {
+    .components-card {
+        border: 1px solid #e0e0e0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+        .components-card__header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+
+            h2 {
+                font-size: 18px;
+                font-weight: 600;
+                margin: 0;
+            }
+        }
+
+        .components-card__body {
+            padding: 20px;
+        }
+    }
+
+    .config-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .server-card {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        transition: box-shadow 0.2s ease;
+
+        &:hover {
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    code {
+        background-color: #f1f1f1;
+        border-radius: 3px;
+        font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+        font-size: 13px;
+        padding: 2px 6px;
+    }
+
+    .mcp-cli-commands {
+        code {
+            background-color: #2d3748;
+            border-radius: 4px;
+            color: #e2e8f0;
+            display: block;
+            font-size: 14px;
+            margin: 4px 0;
+            padding: 8px 12px;
+
+            &:hover {
+                background-color: #4a5568;
+            }
+        }
+    }
+
+    .components-notice {
+        margin-bottom: 20px;
+    }
+}
+
+// Status indicators
+.mcp-status {
+    &--success {
+        color: #46b450;
+    }
+
+    &--error {
+        color: #dc3232;
+    }
+
+    &--warning {
+        color: #f0b849;
+    }
+
+    &--info {
+        color: #0073aa;
+    }
+}
+
+.mcp-status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+
+    &.configured {
+        color: #46b450;
+    }
+
+    &.not-configured {
+        color: #dc3232;
+    }
+}
+
+// Form styling
+.mcp-form-field {
+    margin-bottom: 16px;
+
+    .components-base-control__help {
+        color: #646970;
+        font-size: 13px;
+        margin-top: 6px;
+    }
+}
+
+// Button styling
+.mcp-send-button {
+    .components-button.is-primary {
+        background-color: #1976d2;
+        border-color: #1976d2;
+
+        &:hover:not(:disabled) {
+            background-color: #1565c0;
+            border-color: #1565c0;
+        }
+
+        &:focus:not(:disabled) {
+            box-shadow: 0 0 0 2px #1976d2;
+        }
+    }
+}
+
+// Icon styling
+.mcp-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+// Loading state
+.mcp-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+
+    .components-spinner {
+        margin-right: 12px;
+    }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    .mcp-chat-app {
+        .components-flex {
+            flex-direction: column !important;
+
+            .components-flex-item:last-child {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+// Animations
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mcp-message {
+    animation: fadeInUp 0.3s ease-out;
+}
+
+// Focus styles for accessibility
+.mcp-chat-app, .mcp-settings-app {
+    .components-button:focus {
+        outline: 2px solid #0073aa;
+        outline-offset: 2px;
+    }
+
+    .components-text-control__input:focus,
+    .components-textarea-control__input:focus {
+        border-color: #0073aa;
+        box-shadow: 0 0 0 2px rgba(0, 115, 170, 0.2);
+    }
+} 

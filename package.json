@@ -1,0 +1,48 @@
+{
+    "name": "wordpress-mcp-client",
+    "description": "A WordPress plugin that acts as an MCP (Model Context Protocol) client using OpenAI to interact with MCP servers and AI assistants.",
+    "version": "1.0.0",
+    "license": "GPL-2.0-or-later",
+    "author": "WordPress MCP Team",
+    "files": [
+        "build",
+        "includes",
+        "vendor",
+        "wordpress-mcp-client.php"
+    ],
+    "scripts": {
+        "build": "wp-scripts build",
+        "check-engines": "wp-scripts check-engines",
+        "check-licenses": "wp-scripts check-licenses",
+        "format": "wp-scripts format",
+        "lint:css": "wp-scripts lint-style",
+        "lint:js": "wp-scripts lint-js",
+        "lint:md:docs": "wp-scripts lint-md-docs",
+        "lint:pkg-json": "wp-scripts lint-pkg-json",
+        "packages-update": "wp-scripts packages-update",
+        "plugin-zip": "wp-scripts plugin-zip",
+        "plugin-zip:build": "composer install --no-dev && npm run build && npm run plugin-zip",
+        "start": "wp-scripts start",
+        "test:e2e": "wp-scripts test-e2e",
+        "test:unit": "wp-scripts test-unit-js"
+    },
+    "devDependencies": {
+        "@wordpress/scripts": "^30.18.0"
+    },
+    "dependencies": {
+        "@wordpress/api-fetch": "^7.25.0",
+        "@wordpress/components": "^29.11.0",
+        "@wordpress/element": "^6.25.0",
+        "@wordpress/i18n": "^5.25.0",
+        "@wordpress/icons": "^10.25.0",
+        "@wordpress/notices": "^5.25.0",
+        "@wordpress/data": "^10.25.0",
+        "@wordpress/hooks": "^4.25.0",
+        "marked": "^15.0.12",
+        "dompurify": "^3.1.6"
+    },
+    "engines": {
+        "node": ">=18.12.0",
+        "npm": ">=8.19.2"
+    }
+}

@@ -1,6 +1,7 @@
 <?php
 /**
  * Plugin name:       WordPress MCP Client
+ * Requires Plugins:  wordpress-mcp
  * Description:       A WordPress plugin that acts as an MCP (Model Context Protocol) client using OpenAI to interact with MCP servers and AI assistants.
  * Version:           1.0.0
  * Requires at least: 6.4
